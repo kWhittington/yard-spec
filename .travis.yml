@@ -1,0 +1,4 @@
+before_install: ./bin/travis/before_install
+language: ruby
+rvm:
+  - 2.3.0
