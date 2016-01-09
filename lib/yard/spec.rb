@@ -1,3 +1,4 @@
+require 'yard'
 require 'yard/spec/version'
 
 YARD::Templates::Engine.register_template_path(
