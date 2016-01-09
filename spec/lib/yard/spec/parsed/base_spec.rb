@@ -13,6 +13,10 @@ module YARD
         subject(:base) { described_class.new(given_ast_node) }
         let(:given_ast_node) { instance_double YARD::Parser::Ruby::AstNode }
 
+        it 'is an ActiveModel::Model' do
+          is_expected.to be_an ActiveModel::Model
+        end
+
         describe '#ast_node' do
           subject(:ast_node) { base.ast_node }
 
