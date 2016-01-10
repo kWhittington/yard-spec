@@ -7,9 +7,7 @@ module YARD
         # A description, read from a specification, of a noun.
         class Base < YARD::Spec::Parsed::Base
           def describe_call?
-            return false unless ast_node.call?
-            return false unless ast_node.method_name == 'describe'
-            true
+            ast_node.call? && ast_node.method_name == 'describe'
           end
 
           def must_be_describe_call
