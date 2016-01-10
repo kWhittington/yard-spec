@@ -14,6 +14,10 @@ module YARD
           @ast_node = ast_node
         end
 
+        def describe_call?
+          false
+        end
+
         def to_ast_node
           ast_node
         end

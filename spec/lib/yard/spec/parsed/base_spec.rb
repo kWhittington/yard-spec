@@ -1,3 +1,4 @@
+require 'faker'
 require 'spec_helper'
 require 'yard/spec/parsed/base'
 
@@ -23,6 +24,12 @@ module YARD
           it 'is the AstNode provided at initialization' do
             is_expected.to be given_ast_node
           end
+        end
+
+        describe '#describe_call?' do
+          subject(:describe_call?) { base.describe_call? }
+
+          it('is false') { is_expected.to be false }
         end
 
         describe '#to_ast_node' do
